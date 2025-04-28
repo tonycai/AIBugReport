@@ -196,7 +196,13 @@ aibug list --project "WebApp"
   * Notifications and alerts.
   * User roles and permissions management.
 
-## Contributing
+## Software Licensing and Commercialization Plan
+
+1. **Software Licensing:** Released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), allowing free use, modification, and distribution with preservation of notices.
+2. **Revenue Generation:** A one-time **USD 9.90** technical service fee applies to access the pre-packaged distribution, supporting ongoing development and maintenance.
+3. **Payment Method:** We accept payments in **USD Coin (USDC)** and also welcome **Solana (SOL)** donations at our Phantom Wallet address:
+   `ESUpLq9tCo1bmauWoN1rgNiYwwr5K587h15SrJz9L7ct`
+4. **Custom Solutions:** Bespoke software development services are available. Contact us via Telegram at **@tonyironreal** to discuss your project needs.
 
 *(This section will be added with guidelines for contributing to the project.)*
 
