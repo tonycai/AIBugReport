@@ -91,11 +91,11 @@ graph LR
         M(Response Parsing)
     end
 
-    subgraph LLM (via MCP)
+    subgraph "LLM (via MCP)"
         N[External LLM Service]
     end
 
-    subgraph Error Handling
+    subgraph "Error Handling"
         O(Exception Catching)
         P(Error Logging)
         Q(Standardized Responses)
@@ -135,15 +135,15 @@ graph LR
 
     O --> D
 
-    style User Interface fill:#f9f,stroke:#333,stroke-width:2px
-    style API Layer fill:#ccf,stroke:#333,stroke-width:2px
-    style Core Logic Layer fill:#9cf,stroke:#333,stroke-width:2px
-    style Data Storage fill:#fcc,stroke:#333,stroke-width:2px
-    style Pinata Integration fill:#cfc,stroke:#333,stroke-width:2px
-    style MCP Integration fill:#ffc,stroke:#333,stroke-width:2px
-    style LLM Interaction fill:#cff,stroke:#333,stroke-width:2px
-    style LLM (via MCP) fill:#eee,stroke:#333,stroke-width:2px
-    style Error Handling fill:#ada,stroke:#333,stroke-width:2px
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:2px
+    style E fill:#9cf,stroke:#333,stroke-width:2px
+    style I fill:#fcc,stroke:#333,stroke-width:2px
+    style J fill:#cfc,stroke:#333,stroke-width:2px
+    style K fill:#ffc,stroke:#333,stroke-width:2px
+    style L fill:#cff,stroke:#333,stroke-width:2px
+    style N fill:#eee,stroke:#333,stroke-width:2px
+    style O fill:#ada,stroke:#333,stroke-width:2px
 ```
 
 ## Getting Started
