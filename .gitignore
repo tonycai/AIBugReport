@@ -1,3 +1,5 @@
+# Ignore tests directory
+tests/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -11,7 +13,6 @@ __pycache__/
 build/
 develop-eggs/
 dist/
-downloads/
 eggs/
 .eggs/
 lib/
@@ -19,22 +20,35 @@ lib64/
 parts/
 sdist/
 var/
-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+*,cover
+*.log
+
+# Translations
+*.mo
+*.pot
+
+# Sphinx documentation
+docs/_build
+
+# Jupyter Notebook
+.ipynb_checkpoints
 
 # Environments
 .env
@@ -45,12 +59,13 @@ ENV/
 env.bak/
 venv.bak/
 
-# IDE specific files
+# IDEs and editors
 .idea/
 .vscode/
-*.swp
-*.swo
+*.sublime-project
+*.sublime-workspace
 
-# Database
-*.db
-*.sqlite3
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db

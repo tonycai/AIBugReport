@@ -13,9 +13,10 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/tonycai/AIBugReport",
     packages=find_packages(),
+    license="Apache License 2.0",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",

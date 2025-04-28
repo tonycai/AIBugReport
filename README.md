@@ -1,7 +1,7 @@
 # AIBugReport: Intelligent Bug Tracking CLI
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 ![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)
 
 **AIBugReport** is a command-line interface (CLI) tool designed for efficient and intelligent bug tracking. Leveraging the power of Large Language Models (LLMs) and decentralized storage, it aims to streamline the bug reporting workflow and provide developers with comprehensive information to resolve issues quickly.
@@ -153,19 +153,30 @@ graph LR
 ### Prerequisites
 
   * Python 3.x
-  * MySQL Database
-  * Pinata API Key and Secret
-  * Access to an LLM server supporting MCP (and the necessary credentials)
+  * MySQL Database (configure via environment variables: MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+  * Pinata API credentials (set environment variables: PINATA_API_KEY, PINATA_API_SECRET)
+  * Google Gemini API key (set environment variable: GOOGLE_API_KEY)
+  * (Optional) LLM model name (set environment variable: GOOGLE_API_MODEL; default: gemini-1.5-flash-latest)
 
 ### Installation
 
 ```bash
-# Example installation steps (will be updated)
+# Clone and install dependencies
 git clone https://github.com/tonycai/AIBugReport.git
 cd AIBugReport
 pip install -r requirements.txt
-# Configure database settings, Pinata credentials, and MCP server details
-# (e.g., in a config file or environment variables)
+
+# Configure environment variables for database, Pinata, and Google Gemini API
+export MYSQL_HOST=127.0.0.1           # or your MySQL host
+export MYSQL_PORT=3306                # or your MySQL port
+export MYSQL_USER=root                # or your MySQL user
+export MYSQL_PASSWORD=<your_mysql_password>  # set your MySQL password
+export MYSQL_DATABASE=aibugrepot_db    # or your MySQL database name
+export PINATA_API_KEY=<your_pinata_api_key>
+export PINATA_API_SECRET=<your_pinata_api_secret>
+export PINATA_JWT=<your_pinata_jwt>
+export GOOGLE_API_KEY=<your_google_api_key>
+export GOOGLE_API_MODEL=gemini-1.5-flash-latest  # optional, defaults to gemini-1.5-flash-latest
 ```
 
 ### Usage
@@ -191,7 +202,7 @@ aibug list --project "WebApp"
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
 
 ## Acknowledgements
 

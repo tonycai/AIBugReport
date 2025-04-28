@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: asdf123
+      MYSQL_DATABASE: aibugrepot_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: asdf123
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  aibug:
+    build:
+      context: .
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: asdf123
+      MYSQL_DATABASE: aibugrepot_db
+      PINATA_API_KEY: ${PINATA_API_KEY}
+      PINATA_API_SECRET: ${PINATA_API_SECRET}
+      PINATA_JWT: ${PINATA_JWT}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      GOOGLE_API_MODEL: ${GOOGLE_API_MODEL}
+    # Mount current directory for live edits (optional)
+    volumes:
+      - .:/app:ro
+    tty: true
+
+volumes:
+  db_data:
