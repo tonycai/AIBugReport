@@ -1,0 +1,41 @@
+# AIBugReport Cursor IDE Rules
+
+# Python Rules
+- Follow PEP 8 conventions
+- Use snake_case for variables, functions, and methods
+- Use PascalCase for classes
+- Use UPPERCASE for constants
+- Use docstrings for all modules, classes, and functions
+- Import order: standard library, third-party, local modules
+- Use type hints for function parameters and return values
+- Use specific exceptions in try/except blocks
+- Use environment variables for configuration
+- Add meaningful error messages when raising exceptions
+
+# Frontend Rules (JavaScript/React)
+- Use ES6 syntax
+- Use camelCase for variables and functions
+- Use PascalCase for React components
+- Use destructuring where appropriate
+- Use async/await for asynchronous operations
+- Prefer const over let where possible
+- Keep components small and focused
+
+# Testing
+- Write tests for all new functionality
+- Maintain high test coverage
+- Use descriptive test names that explain what is being tested
+- Follow AAA pattern: Arrange, Act, Assert
+- Mock external dependencies in unit tests
+
+# Error Handling
+- Log errors with appropriate severity levels
+- Provide user-friendly error messages
+- Handle edge cases explicitly
+- Never suppress exceptions without good reason
+
+# Database
+- Use parameterized queries to prevent SQL injection
+- Close database connections after use
+- Handle database errors gracefully
+- Use transactions where appropriate
